@@ -1,0 +1,4 @@
+#!/bin/bash
+scp web/nuxeo.war/scripts/custom-javascript.js nuxeo@doku.ub.gu.se:/var/lib/nuxeo/server/nxserver/nuxeo.war/scripts
+scp web/nuxeo.war/css/custom-css.css nuxeo@doku.ub.gu.se:/var/lib/nuxeo/server/nxserver/nuxeo.war/css
+scp web/nuxeo.war/img/gub-dokhem-logo.png nuxeo@doku.ub.gu.se:/var/lib/nuxeo/server/nxserver/nuxeo.war/img

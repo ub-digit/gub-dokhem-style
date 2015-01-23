@@ -1,0 +1,10 @@
+all: clean compile install
+
+clean:
+	mvn -o clean
+
+compile:
+	mvn -DskipTests=true -o install
+
+install:
+	cp target/*-6.0.jar /Users/xanjoo/opt/nuxeo-sdk/nxserver/plugins/

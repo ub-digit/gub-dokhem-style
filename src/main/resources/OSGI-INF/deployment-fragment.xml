@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fragment>
+  <extension target="application#MODULE">
+    <module>
+      <java>${bundle.fileName}</java>
+    </module>
+  </extension>
+  <install>
+    <!-- Unzip the contents of our nuxeo.war into the server -->
+    <unzip from="${bundle.fileName}" to="/">
+      <include>nuxeo.war/**</include>
+    </unzip>
+  </install>
+</fragment>
