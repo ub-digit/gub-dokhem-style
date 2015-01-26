@@ -1,14 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <fragment>
+
   <extension target="application#MODULE">
     <module>
       <java>${bundle.fileName}</java>
     </module>
   </extension>
+
   <install>
-    <!-- Unzip the contents of our nuxeo.war into the server -->
+
+    <!-- Unzip the contents of our nuxeo.war into the real nuxeo.war on the server -->
     <unzip from="${bundle.fileName}" to="/">
       <include>nuxeo.war/**</include>
     </unzip>
+
+    <!--make sure the directory is there for messages files-->
+    <mkdir path="lessson-l10n.tmp"/>
+
+    <!-- Unzip the l10n directory to a temporary place-->
+    <unzip from="${bundle.fileName}" to="lessson-l10n.tmp">
+      <include>l10n/**</include>
+    </unzip>
+
+    <!-- copy default text -->
+    <append
+      from="lessson-l10n.tmp/l10n/messages_en.properties"
+      to="nuxeo.war/WEB-INF/classes/messages_en.properties"
+      addNewLine="true"/>
+
   </install>
 </fragment>

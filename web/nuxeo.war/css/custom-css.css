@@ -1,5 +1,10 @@
 /* Placeholder for custom CSS */  
 
+body {
+	opacity: 0;
+}
+
+
 .siteLogo img {
 	display: none;
 }
@@ -14,9 +19,19 @@
 	height: 40px;
 	width: 300px;
 	margin-left: 10px !important;
+	cursor: pointer;
+}
+
+#nxw_searchActions_clearSearch  {
+	display: block;
+	border: 1px solid red;
+
 }
 
 
+#nxw_suggest_search_box_form {
+ display: none;
+}
 
 .footerDefaultLinks {
 	display: none;
