@@ -1,31 +1,29 @@
-<fragment>
+<?xml version="1.0"?>
+<fragment version="1">
 
-  <extension target="application#MODULE">
-    <module>
-      <java>${bundle.fileName}</java>
-    </module>
-  </extension>
+  <require>org.nuxeo.ecm.platform.lang</require>
+  <require>org.nuxeo.ecm.webapp.ui</require>
+  <require>org.nuxeo.search.ui</require>
 
   <install>
-
-    <!-- Unzip the contents of our nuxeo.war into the real nuxeo.war on the server -->
-    <unzip from="${bundle.fileName}" to="/">
-      <include>nuxeo.war/**</include>
+    <unzip from="${bundle.fileName}" to="/" prefix="web">
+      <include>web/nuxeo.war/**</include>
     </unzip>
 
-    <!--make sure the directory is there for messages files-->
-    <mkdir path="lessson-l10n.tmp"/>
+    <delete path="${bundle.fileName}.tmp" />
+    <mkdir path="${bundle.fileName}.tmp" />
+    <unzip from="${bundle.fileName}" to="${bundle.fileName}.tmp" />
 
-    <!-- Unzip the l10n directory to a temporary place-->
-    <unzip from="${bundle.fileName}" to="lessson-l10n.tmp">
-      <include>l10n/**</include>
-    </unzip>
-
-    <!-- copy default text -->
     <append
-      from="lessson-l10n.tmp/l10n/messages_en.properties"
-      to="nuxeo.war/WEB-INF/classes/messages_en.properties"
-      addNewLine="true"/>
+      from="${bundle.fileName}.tmp/OSGI-INF/l10n/messages_es_ES.properties"
+      to="nuxeo.war/WEB-INF/classes/messages_es_ES.properties"
+      addNewLine="true" />
+    <append
+      from="${bundle.fileName}.tmp/OSGI-INF/l10n/messages_es_ES.properties"
+      to="nuxeo.war/WEB-INF/classes/messages_es.properties"
+      addNewLine="true" />
 
+    <delete path="${bundle.fileName}.tmp" />
   </install>
+
 </fragment>

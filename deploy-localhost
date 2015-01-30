@@ -1,4 +1,0 @@
-#!/bin/bash
-cp web/nuxeo.war/scripts/custom-javascript.js /Users/xanjoo/opt/nuxeo-sdk/nxserver/nuxeo.war/scripts
-cp web/nuxeo.war/css/custom-css.css /Users/xanjoo/opt/nuxeo-sdk/nxserver/nuxeo.war/css
-cp web/nuxeo.war/img/gub-dokhem-logo.png /Users/xanjoo/opt/nuxeo-sdk/nxserver/nuxeo.war/img
