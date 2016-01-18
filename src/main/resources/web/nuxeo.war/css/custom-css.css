@@ -1,4 +1,4 @@
-/* Placeholder for custom CSS */  
+/* Placeholder for custom CSS */
 
 body {
 	opacity: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 .siteLogo {
-	background-image: url("http://doku.ub.gu.se/nuxeo/img/gub-dokhem-logo.png");
+	background-image: url("/nuxeo/img/gub-dokhem-logo.png");
 	background-repeat: no-repeat;
 	height: 40px;
 	width: 300px;
