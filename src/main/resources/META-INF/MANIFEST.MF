@@ -3,7 +3,6 @@ Require-Bundle: org.nuxeo.runtime
 Bundle-Vendor: Digital Service, Gothenburg University Library
 Bundle-Version: 1.0.0
 Bundle-Name: UB Custom Style
- versity
 Bundle-ManifestVersion: 2
 Created-By: Johan Andersson von Geijer
 Bundle-SymbolicName: se.gu.ub.nuxeo.custom.style
